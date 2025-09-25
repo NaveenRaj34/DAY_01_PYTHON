@@ -1,0 +1,101 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+No Constraints
+
+Output Format
+
+Execute the Pattern.
+
+Sample Input 0
+
+3
+Sample Output 0
+
+  *
+ * *
+*   *
+ * *
+  *
+Sample Input 1
+
+5
+Sample Output 1
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Sample Input 2
+
+8
+Sample Output 2
+
+       *
+      * *
+     *   *
+    *     *
+   *       *
+  *         *
+ *           *
+*             *
+ *           *
+  *         *
+   *       *
+    *     *
+     *   *
+      * *
+       *
+
+
+
+
+
+
+
+
+# Program to print a hollow diamond/star pattern
+
+# Input
+n = int(input())
+
+# Top half
+for i in range(1, n + 1):
+    # Print leading spaces
+    print(' ' * (n - i), end='')
+
+    for j in range(1, i + 1):
+        # Print star at first and last position of row, else space
+        if j == 1 or j == i:
+            print('*', end='')
+        else:
+            print(' ', end='')
+        if j != i:  # Add space between stars except last
+            print(' ', end='')
+    print()
+
+# Bottom half
+for i in range(n - 1, 0, -1):
+    # Print leading spaces
+    print(' ' * (n - i), end='')
+
+    for j in range(1, i + 1):
+        # Print star at first and last position of row, else space
+        if j == 1 or j == i:
+            print('*', end='')
+        else:
+            print(' ', end='')
+        if j != i:  # Add space between stars except last
+            print(' ', end='')
+    print()
+
