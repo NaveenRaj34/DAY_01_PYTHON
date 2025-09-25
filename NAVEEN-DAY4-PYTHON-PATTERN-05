@@ -1,0 +1,66 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+Constraints
+
+Output Format
+
+Execute the pattern
+
+Sample Input 0
+
+5
+Sample Output 0
+
+*   *
+ * *
+  *
+ * *
+*   *
+Sample Input 1
+
+9
+Sample Output 1
+
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+
+
+
+
+
+# Program to print X-shaped hollow star pattern
+
+# Input
+n = int(input())
+
+# Top half including middle
+for i in range(n // 2 + 1):
+    print(' ' * i, end='')  # Leading spaces
+    print('*', end='')       # First star
+    if i != n // 2:          # Space between stars (except middle row)
+        print(' ' * (n - 2*(i+1)), end='')
+        print('*', end='')
+    print()
+
+# Bottom half
+for i in range(n // 2 - 1, -1, -1):
+    print(' ' * i, end='')  # Leading spaces
+    print('*', end='')       # First star
+    if i != n // 2:          # Space between stars (except middle row)
+        print(' ' * (n - 2*(i+1)), end='')
+        print('*', end='')
+    print()
