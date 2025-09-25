@@ -1,0 +1,62 @@
+The program to find if the given numbers are Friendly pairs or not (Amicable or not) is discussed here. Friendly Pairs are two or more numbers with a common abundance.
+
+For example,6 and 28 are Friendly Pairs.
+
+    (Sum of divisors of given number1)/given number1 = (Sum of divisors of given number2)/given number2  
+- sum of divisors for 6 is 1,2,3,6=(1+2+3+6)=12
+- sum of divisors for 28 is 1,2,4,7,14,28=56
+- (12/6)==(56/28).Its a Friendly Pair.
+Input Format
+
+Input consists of 2 integers.
+Constraints
+
+No Constraints
+
+Output Format
+
+If it is a Friendly Pair display "Friendly Pair" or displays "Not Friendly Pair".
+Sample Input 0
+
+15
+25
+Sample Output 0
+
+The Given Number 15 and 25 are Friendly Pairs.
+Sample Input 1
+
+8
+30
+Sample Output 1
+
+The Given Number 8 and 30 are Not Friendly Pairs.
+
+
+
+
+
+
+
+# Program to check if two numbers are Friendly Pairs
+
+# Function to calculate sum of divisors
+def sum_of_divisors(n):
+    s = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            s += i
+    return s
+
+# Input
+num1 = int(input())
+num2 = int(input())
+
+# Calculate abundances
+ratio1 = sum_of_divisors(num1) / num1
+ratio2 = sum_of_divisors(num2) / num2
+
+# Check condition
+if ratio1 == ratio2:
+    print(f"The Given Number {num1} and {num2} are Friendly Pairs.")
+else:
+    print(f"The Given Number {num1} and {num2} are Not Friendly Pairs.")
