@@ -1,0 +1,77 @@
+Write a program to execute the Pattern.
+
+Input Format
+
+Input consists single Integer.
+
+Constraints
+
+Constraints
+
+Output Format
+
+Execute the pattern
+
+Sample Input 0
+
+3
+Sample Output 0
+
+*****
+ ***
+  *
+ ***
+*****
+Sample Input 1
+
+5
+Sample Output 1
+
+********* 
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+Sample Input 2
+
+7
+Sample Output 2
+
+*************
+ ***********
+  *********
+   *******
+    *****
+     ***
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************
+
+
+
+
+
+
+
+
+
+# Program to print the diamond-like star pattern
+
+# Input
+n = int(input())
+
+# Top half including middle row
+for i in range(n):
+    print(' ' * i + '*' * (2 * (n - i) - 1))
+
+# Bottom half
+for i in range(n - 2, -1, -1):
+    print(' ' * i + '*' * (2 * (n - i) - 1))
